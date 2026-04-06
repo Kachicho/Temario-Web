@@ -30,7 +30,7 @@ main { position:relative; z-index:10; padding:2rem 1.5rem 4rem; max-width:1300px
 .sidebar-btn img { width:64px; height:64px; object-fit:contain; border-radius:12px; border:1px solid var(--border); background:var(--card); padding:4px; }
 .sidebar-btn span { font-size:0.62rem; color:var(--muted); text-align:center; line-height:1.3; transition:color 0.2s; }
 .sidebar-btn:hover span { color:var(--accent); }
-.temas-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(130px,1fr)); gap:1rem; flex:1; }
+.temas-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(130px,1fr)); gap:1rem; flex:1; justify-items:center; justify-content:center; }
 .tema-btn { position:relative; background:none; border:none; cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:0.5rem; padding:0.5rem; animation:popIn 0.4s calc(var(--d,0)*0.05s) both; }
 @keyframes popIn { from{opacity:0;transform:scale(0.85) translateY(8px)} to{opacity:1;transform:scale(1) translateY(0)} }
 .tema-circle { width:110px; height:110px; border-radius:50%; overflow:hidden; border:2px solid var(--border); position:relative; transition:transform 0.25s cubic-bezier(.34,1.56,.64,1),border-color 0.2s,box-shadow 0.2s; background:var(--card); }
@@ -46,7 +46,7 @@ main { position:relative; z-index:10; padding:2rem 1.5rem 4rem; max-width:1300px
 .modal { background:var(--surface); border:1px solid rgba(255,255,255,0.1); border-radius:20px; width:100%; max-width:560px; max-height:85vh; overflow:hidden; display:flex; flex-direction:column; transform:scale(0.92) translateY(20px); transition:transform 0.3s cubic-bezier(.34,1.3,.64,1); box-shadow:0 40px 80px -20px rgba(0,0,0,0.8); }
 .modal-overlay.open .modal { transform:scale(1) translateY(0); }
 .modal-hero { position:relative; height:180px; overflow:hidden; flex-shrink:0; }
-.modal-hero img { width:100%; height:100%; object-fit:cover; filter:brightness(0.6); }
+.modal-hero img { width:100%; height:100%; object-fit:cover; object-position:center; filter:brightness(0.6); }
 .modal-hero-overlay { position:absolute; inset:0; background:linear-gradient(to bottom,transparent 30%,var(--surface) 100%); }
 .modal-hero-info { position:absolute; bottom:1rem; left:1.2rem; right:1.2rem; display:flex; align-items:flex-end; gap:0.8rem; }
 .modal-icon-wrap { width:56px; height:56px; border-radius:50%; overflow:hidden; border:2px solid rgba(56,189,248,0.5); flex-shrink:0; background:var(--card); }
@@ -553,91 +553,91 @@ const CURSOS = {
   ]},
 
   "2bachF": { label:"2º Bachillerato - Física", temas:[
-    { nombre:"Método científico",           icono:"imagenes/2BACHF/UD01.png", fondo:"imagenes/2BACHF/UD01.png", enlaces:[
+    { nombre:"Método científico",           icono:"imagenes/2BACHF/UD01.png", fondo:"imagenes/2BACHF/UD01_-_Método_científico.jpg", enlaces:[
       { label:"Presentación online", tipo:"online", url:"https://1drv.ms/b/c/5e49627fe7eec215/IQC3eJHRs45sRq8t7eFO3gabAT-0Q3yMXz46mevqrN_KiKI" },
       { label:"Formulario", tipo:"formulario", url:"https://onedrive.live.com/?id=%2Fpersonal%2F5e49627fe7eec215%2FDocuments%2FApuntes%2F2%C2%BA%20Bachillerato%20%2D%20F%C3%ADsica%2FApuntes%20%2D%20Formularios%2FUD01%20%2D%20M%C3%A9todo%20cient%C3%ADfico%20%2D%20Formulario%2Epdf&parent=%2Fpersonal%2F5e49627fe7eec215%2FDocuments%2FApuntes%2F2%C2%BA%20Bachillerato%20%2D%20F%C3%ADsica%2FApuntes%20%2D%20Formularios" },
       { label:"Cuestionario Google", tipo:"google", url:"https://docs.google.com/forms/d/e/1FAIpQLSdaCIwxtLnNXAq7p_AzEG-6pnantqhcu9UqRzHMOeLf5l8GFg/viewform" },
       { label:"Kahoot en grupo",     tipo:"kahoot_grupo", url:"https://play.kahoot.it/v2/lobby?quizId=10bb6692-b36c-48d5-a353-84612a7032dc" },
       { label:"Kahoot en solitario", tipo:"kahoot_solo",  url:"https://kahoot.it/solo/?quizId=10bb6692-b36c-48d5-a353-84612a7032dc&gameMode=nano" },
     ]},
-    { nombre:"Campo gravitatorio",          icono:"imagenes/2BACHF/UD02.png", fondo:"imagenes/2BACHF/UD02.png", enlaces:[
+    { nombre:"Campo gravitatorio",          icono:"imagenes/2BACHF/UD02.png", fondo:"imagenes/2BACHF/UD02_-_Campo_gravitatorio.jpg", enlaces:[
       { label:"Presentación online", tipo:"online", url:"https://1drv.ms/b/c/5e49627fe7eec215/EVEcSp-rxnZFqE6MyTaxlHkB9foHR1NcHYIMSy6fPW-0Qg?e=jp8On9" },
       { label:"Formulario", tipo:"formulario", url:"https://onedrive.live.com/?id=%2Fpersonal%2F5e49627fe7eec215%2FDocuments%2FApuntes%2F2%C2%BA%20Bachillerato%20%2D%20F%C3%ADsica%2FApuntes%20%2D%20Formularios%2FUD02%20%2D%20Campo%20gravitatorio%20%2D%20Formulario%2Epdf&parent=%2Fpersonal%2F5e49627fe7eec215%2FDocuments%2FApuntes%2F2%C2%BA%20Bachillerato%20%2D%20F%C3%ADsica%2FApuntes%20%2D%20Formularios" },
       { label:"Cuestionario Google", tipo:"google", url:"https://docs.google.com/forms/d/e/1FAIpQLSesNwLOWd4SXW0D8Rna-BAUnZXLywDOnR6NowxNkdYK1jXBfw/viewform" },
       { label:"Kahoot en grupo",     tipo:"kahoot_grupo", url:"https://play.kahoot.it/v2/intro?quizId=a0260fe3-9322-4894-b3b3-eca31e83ebd9" },
       { label:"Kahoot en solitario", tipo:"kahoot_solo",  url:"https://kahoot.it/solo/?quizId=a0260fe3-9322-4894-b3b3-eca31e83ebd9&gameMode=nano" },
     ]},
-    { nombre:"Campo eléctrico",             icono:"imagenes/2BACHF/UD03.png", fondo:"imagenes/2BACHF/UD03.png", enlaces:[
+    { nombre:"Campo eléctrico",             icono:"imagenes/2BACHF/UD03.png", fondo:"imagenes/2BACHF/UD03_-_Campo_eléctrico.jpg", enlaces:[
       { label:"Presentación online", tipo:"online", url:"https://1drv.ms/b/c/5e49627fe7eec215/ESngpu0e57dEifV2vt3p4JEBC03Ap59VdfBcmKtg70E8vA?e=jlszjc" },
       { label:"Formulario", tipo:"formulario", url:"https://onedrive.live.com/?id=%2Fpersonal%2F5e49627fe7eec215%2FDocuments%2FApuntes%2F2%C2%BA%20Bachillerato%20%2D%20F%C3%ADsica%2FApuntes%20%2D%20Formularios%2FUD03%20%2D%20Campo%20el%C3%A9ctrico%20%2D%20Formulario%2Epdf&parent=%2Fpersonal%2F5e49627fe7eec215%2FDocuments%2FApuntes%2F2%C2%BA%20Bachillerato%20%2D%20F%C3%ADsica%2FApuntes%20%2D%20Formularios" },
       { label:"Cuestionario Google", tipo:"google", url:"https://docs.google.com/forms/d/e/1FAIpQLSeLoXxEgZBSF-4oeHN-JpTIhtvFkvg3RsPTW6JaNA-1xVzPmw/viewform" },
       { label:"Kahoot en grupo",     tipo:"kahoot_grupo", url:"https://play.kahoot.it/v2/intro?quizId=a8691e45-985e-4768-8607-f5ebb3d007b6" },
       { label:"Kahoot en solitario", tipo:"kahoot_solo",  url:"https://kahoot.it/solo/?quizId=a8691e45-985e-4768-8607-f5ebb3d007b6&gameMode=nano" },
     ]},
-    { nombre:"Campo magnético",             icono:"imagenes/2BACHF/UD04.png", fondo:"imagenes/2BACHF/UD04.png", enlaces:[
+    { nombre:"Campo magnético",             icono:"imagenes/2BACHF/UD04.png", fondo:"imagenes/2BACHF/UD04_-_Campo_magnético.jpg", enlaces:[
       { label:"Presentación online", tipo:"online", url:"https://1drv.ms/b/c/5e49627fe7eec215/EROBx-Vv0B9Lvg7sIco05ZMBcuhTKsLqEVlwsCz_yS21-w?e=vgeIxd" },
       { label:"Formulario", tipo:"formulario", url:"https://onedrive.live.com/?id=%2Fpersonal%2F5e49627fe7eec215%2FDocuments%2FApuntes%2F2%C2%BA%20Bachillerato%20%2D%20F%C3%ADsica%2FApuntes%20%2D%20Formularios%2FUD04%20%2D%20Campo%20magn%C3%A9tico%20%2D%20Formulario%2Epdf&parent=%2Fpersonal%2F5e49627fe7eec215%2FDocuments%2FApuntes%2F2%C2%BA%20Bachillerato%20%2D%20F%C3%ADsica%2FApuntes%20%2D%20Formularios" },
       { label:"Cuestionario Google", tipo:"google", url:"https://docs.google.com/forms/d/e/1FAIpQLSdyPvUrRdnA4da1RFC8NvootEi5F6wLgX2mV4U0gbOQwXq9Vw/viewform" },
       { label:"Kahoot en grupo",     tipo:"kahoot_grupo", url:"https://play.kahoot.it/v2/intro?quizId=66af51b6-3681-465d-9750-91eb29d4e405" },
       { label:"Kahoot en solitario", tipo:"kahoot_solo",  url:"https://kahoot.it/solo/?quizId=66af51b6-3681-465d-9750-91eb29d4e405&gameMode=nano" },
     ]},
-    { nombre:"Inducción electromagnética",  icono:"imagenes/2BACHF/UD05.png", fondo:"imagenes/2BACHF/UD05.png", enlaces:[
+    { nombre:"Inducción electromagnética",  icono:"imagenes/2BACHF/UD05.png", fondo:"imagenes/2BACHF/UD05_-_Inducción_electromagnética.jpg", enlaces:[
       { label:"Presentación online", tipo:"online", url:"https://1drv.ms/b/c/5e49627fe7eec215/IQBXfbko8utXRZ9fjqUjZ89YAVb6e-uyH1h2N_ELYG-wFYA?e=YCcVBd" },
       { label:"Formulario", tipo:"formulario", url:"https://onedrive.live.com/?id=%2Fpersonal%2F5e49627fe7eec215%2FDocuments%2FApuntes%2F2%C2%BA%20Bachillerato%20%2D%20F%C3%ADsica%2FApuntes%20%2D%20Formularios%2FUD05%20%2D%20Inducci%C3%B3n%20electromagn%C3%A9tica%20%2D%20Formulario%2Epdf&parent=%2Fpersonal%2F5e49627fe7eec215%2FDocuments%2FApuntes%2F2%C2%BA%20Bachillerato%20%2D%20F%C3%ADsica%2FApuntes%20%2D%20Formularios" },
       { label:"Cuestionario Google", tipo:"google", url:"https://docs.google.com/forms/d/e/1FAIpQLSfOUj420NrmGfcJZU8G0ifXGnP86lYG-5jIRpl7LcXssetVHQ/viewform" },
       { label:"Kahoot en grupo",     tipo:"kahoot_grupo", url:"https://play.kahoot.it/v2/lobby?quizId=f09dec56-8a20-4408-8cb6-5a5933c1742d" },
       { label:"Kahoot en solitario", tipo:"kahoot_solo",  url:"https://kahoot.it/solo/?quizId=f09dec56-8a20-4408-8cb6-5a5933c1742d&gameMode=nano" },
     ]},
-    { nombre:"Movimiento ondulatorio",      icono:"imagenes/2BACHF/UD06.png", fondo:"imagenes/2BACHF/UD06.png", enlaces:[
+    { nombre:"Movimiento ondulatorio",      icono:"imagenes/2BACHF/UD06.png", fondo:"imagenes/2BACHF/UD06_-_Movimiento_ondulatorio.jpg", enlaces:[
       { label:"Presentación online", tipo:"online", url:"https://1drv.ms/b/c/5e49627fe7eec215/IQCbp-4KaM3cR6vPOfnSPTiUASE79tYmR_TPNRBoWnNzzfI?e=hA6zoG" },
       { label:"Formulario", tipo:"formulario", url:"https://onedrive.live.com/?id=%2Fpersonal%2F5e49627fe7eec215%2FDocuments%2FApuntes%2F2%C2%BA%20Bachillerato%20%2D%20F%C3%ADsica%2FApuntes%20%2D%20Formularios%2FUD06%20%2D%20Movimiento%20ondulatorio%20%2D%20Formulario%2Epdf&parent=%2Fpersonal%2F5e49627fe7eec215%2FDocuments%2FApuntes%2F2%C2%BA%20Bachillerato%20%2D%20F%C3%ADsica%2FApuntes%20%2D%20Formularios" },
       { label:"Cuestionario Google", tipo:"google", url:"https://docs.google.com/forms/d/e/1FAIpQLSefkYP0_ArCtlQXgSc3x71X6x8df98sI1kMVir7D3uJdhPrRw/viewform" },
       { label:"Kahoot en grupo",     tipo:"kahoot_grupo", url:"https://play.kahoot.it/v2/lobby?quizId=c67d6754-f5c1-4b07-b22b-3e76566d2063" },
       { label:"Kahoot en solitario", tipo:"kahoot_solo",  url:"https://kahoot.it/solo/?quizId=c67d6754-f5c1-4b07-b22b-3e76566d2063&gameMode=nano" },
     ]},
-    { nombre:"Ondas sonoras",               icono:"imagenes/2BACHF/UD07.png", fondo:"imagenes/2BACHF/UD07.png", enlaces:[
+    { nombre:"Ondas sonoras",               icono:"imagenes/2BACHF/UD07.png", fondo:"imagenes/2BACHF/UD07_-_Ondas_sonoras.jpg", enlaces:[
       { label:"Presentación online", tipo:"online", url:"https://1drv.ms/b/c/5e49627fe7eec215/EQa6NLxyLk1Kn80hbg4lMAkBW4EpallxIw35rSSG-rNxnw?e=l8QbS6" },
       { label:"Formulario", tipo:"formulario", url:"https://onedrive.live.com/?id=%2Fpersonal%2F5e49627fe7eec215%2FDocuments%2FApuntes%2F2%C2%BA%20Bachillerato%20%2D%20F%C3%ADsica%2FApuntes%20%2D%20Formularios%2FUD07%20%2D%20Ondas%20sonoras%20%2D%20Formulario%2Epdf&parent=%2Fpersonal%2F5e49627fe7eec215%2FDocuments%2FApuntes%2F2%C2%BA%20Bachillerato%20%2D%20F%C3%ADsica%2FApuntes%20%2D%20Formularios" },
       { label:"Cuestionario Google", tipo:"google", url:"https://docs.google.com/forms/d/e/1FAIpQLSfuDEwCqEtRPp7kp0wkvb72qhNEaWJRRPhiS0TuVqe8DbVdWQ/viewform" },
       { label:"Kahoot en grupo",     tipo:"kahoot_grupo", url:"https://play.kahoot.it/v2/lobby?quizId=4af7f93e-76dc-44d1-a3ed-d17249afc696" },
       { label:"Kahoot en solitario", tipo:"kahoot_solo",  url:"https://kahoot.it/solo/?quizId=4af7f93e-76dc-44d1-a3ed-d17249afc696&gameMode=nano" },
     ]},
-    { nombre:"Ondas electromagnéticas",     icono:"imagenes/2BACHF/UD08.png", fondo:"imagenes/2BACHF/UD08.png", enlaces:[
+    { nombre:"Ondas electromagnéticas",     icono:"imagenes/2BACHF/UD08.png", fondo:"imagenes/2BACHF/UD08_-_Ondas_electromagnéticas.jpg", enlaces:[
       { label:"Presentación online", tipo:"online", url:"https://1drv.ms/b/c/5e49627fe7eec215/ETiB3rS75LhNnjKXCg2O_QcBcQ4Gaf6zlJvjKP_-OiOThw?e=acpGTB" },
       { label:"Formulario", tipo:"formulario", url:"https://onedrive.live.com/?id=%2Fpersonal%2F5e49627fe7eec215%2FDocuments%2FApuntes%2F2%C2%BA%20Bachillerato%20%2D%20F%C3%ADsica%2FApuntes%20%2D%20Formularios%2FUD08%20%2D%20Ondas%20electromagn%C3%A9ticas%20%2D%20Formulario%2Epdf&parent=%2Fpersonal%2F5e49627fe7eec215%2FDocuments%2FApuntes%2F2%C2%BA%20Bachillerato%20%2D%20F%C3%ADsica%2FApuntes%20%2D%20Formularios" },
       { label:"Cuestionario Google", tipo:"google", url:"https://docs.google.com/forms/d/e/1FAIpQLSeUFZokEGqnHl1p_RejxFH55MadS9DoBPmxR2OfaUKUFwM4ig/viewform" },
       { label:"Kahoot en grupo",     tipo:"kahoot_grupo", url:"https://play.kahoot.it/v2/lobby?quizId=61592109-659a-450b-8718-d56b56e08700" },
       { label:"Kahoot en solitario", tipo:"kahoot_solo",  url:"https://kahoot.it/solo/?quizId=61592109-659a-450b-8718-d56b56e08700&gameMode=nano" },
     ]},
-    { nombre:"Óptica geométrica",           icono:"imagenes/2BACHF/UD09.png", fondo:"imagenes/2BACHF/UD09.png", enlaces:[
+    { nombre:"Óptica geométrica",           icono:"imagenes/2BACHF/UD09.png", fondo:"imagenes/2BACHF/UD09_-_Óptica_geométrica.jpg", enlaces:[
       { label:"Presentación online", tipo:"online", url:"https://1drv.ms/b/c/5e49627fe7eec215/IQC3eJHRs45sRq8t7eFO3gabAT-0Q3yMXz46mevqrN_KiKI" },
       { label:"Formulario", tipo:"formulario", url:"https://onedrive.live.com/?id=%2Fpersonal%2F5e49627fe7eec215%2FDocuments%2FApuntes%2F2%C2%BA%20Bachillerato%20%2D%20F%C3%ADsica%2FApuntes%20%2D%20Formularios%2FUD09%20%2D%20%C3%93ptica%20geom%C3%A9trica%20%2D%20Formulario%2Epdf&parent=%2Fpersonal%2F5e49627fe7eec215%2FDocuments%2FApuntes%2F2%C2%BA%20Bachillerato%20%2D%20F%C3%ADsica%2FApuntes%20%2D%20Formularios" },
       { label:"Cuestionario Google", tipo:"google", url:"https://docs.google.com/forms/d/e/1FAIpQLSef-ECyhGQAwPESXa-so72uZsjpPrmPpfIjNuBrrKCRnhfumg/viewform" },
       { label:"Kahoot en grupo",     tipo:"kahoot_grupo", url:"https://play.kahoot.it/v2/lobby?quizId=81e45137-c6af-447f-9451-a3045cc9c0ef" },
       { label:"Kahoot en solitario", tipo:"kahoot_solo",  url:"https://kahoot.it/solo/?quizId=81e45137-c6af-447f-9451-a3045cc9c0ef&gameMode=nano" },
     ]},
-    { nombre:"Teoría de la relatividad especial", icono:"imagenes/2BACHF/UD10.png", fondo:"imagenes/2BACHF/UD10.png", enlaces:[
+    { nombre:"Teoría de la relatividad especial", icono:"imagenes/2BACHF/UD10.png", fondo:"imagenes/2BACHF/UD10_-_Teoría_de_la_relatividad_especial.jpg", enlaces:[
       { label:"Presentación online", tipo:"online", url:"https://1drv.ms/b/c/5e49627fe7eec215/EWtOqKaz1NFIlmGTNgefbxEBXuWPuTQJLIwfKQjV2lO8Wg?e=4prcqk" },
       { label:"Formulario", tipo:"formulario", url:"https://onedrive.live.com/?id=%2Fpersonal%2F5e49627fe7eec215%2FDocuments%2FApuntes%2F2%C2%BA%20Bachillerato%20%2D%20F%C3%ADsica%2FApuntes%20%2D%20Formularios%2FUD10%20%2D%20Teor%C3%ADa%20de%20la%20relatividad%20especial%20%2D%20Formulario%2Epdf&parent=%2Fpersonal%2F5e49627fe7eec215%2FDocuments%2FApuntes%2F2%C2%BA%20Bachillerato%20%2D%20F%C3%ADsica%2FApuntes%20%2D%20Formularios" },
       { label:"Cuestionario Google", tipo:"google", url:"https://docs.google.com/forms/d/e/1FAIpQLScSWHGRt1-QXJ1HdtZDo_Rf7Y93VEjWa2wVblij2kvDkRtOOg/viewform" },
       { label:"Kahoot en grupo",     tipo:"kahoot_grupo", url:"https://play.kahoot.it/v2/lobby?quizId=8e1e6fdb-1dd3-411b-a383-784de563fc94" },
       { label:"Kahoot en solitario", tipo:"kahoot_solo",  url:"https://kahoot.it/solo/?quizId=8e1e6fdb-1dd3-411b-a383-784de563fc94&gameMode=nano" },
     ]},
-    { nombre:"Mecánica cuántica",           icono:"imagenes/2BACHF/UD11.png", fondo:"imagenes/2BACHF/UD11.png", enlaces:[
+    { nombre:"Mecánica cuántica",           icono:"imagenes/2BACHF/UD11.png", fondo:"imagenes/2BACHF/UD11_-_Mecánica_cuántica.jpg", enlaces:[
       { label:"Presentación online", tipo:"online", url:"https://1drv.ms/b/c/5e49627fe7eec215/EcV9lWENee5OuwxPAN5IalYBAyrCIC47YS3XzDib2o4-0A?e=AFRlmK" },
       { label:"Formulario", tipo:"formulario", url:"https://onedrive.live.com/?id=%2Fpersonal%2F5e49627fe7eec215%2FDocuments%2FApuntes%2F2%C2%BA%20Bachillerato%20%2D%20F%C3%ADsica%2FApuntes%20%2D%20Formularios%2FUD11%20%2D%20Mec%C3%A1nica%20cu%C3%A1ntica%20%2D%20Formulario%2Epdf&parent=%2Fpersonal%2F5e49627fe7eec215%2FDocuments%2FApuntes%2F2%C2%BA%20Bachillerato%20%2D%20F%C3%ADsica%2FApuntes%20%2D%20Formularios" },
       { label:"Cuestionario Google", tipo:"google", url:"https://docs.google.com/forms/d/e/1FAIpQLScks_smhoMtsnnW5d7U3112zaZxuI2jA7F7Q_07Io-2lXT8nQ/viewform" },
       { label:"Kahoot en grupo",     tipo:"kahoot_grupo", url:"https://play.kahoot.it/v2/intro?quizId=d2c3b643-8e37-45ae-9d66-5ce3b7ef8c88" },
       { label:"Kahoot en solitario", tipo:"kahoot_solo",  url:"https://kahoot.it/solo/?quizId=d2c3b643-8e37-45ae-9d66-5ce3b7ef8c88&gameMode=nano" },
     ]},
-    { nombre:"Física nuclear",              icono:"imagenes/2BACHF/UD12.png", fondo:"imagenes/2BACHF/UD12.png", enlaces:[
+    { nombre:"Física nuclear",              icono:"imagenes/2BACHF/UD12.png", fondo:"imagenes/2BACHF/UD12_-_Física_nuclear.jpg", enlaces:[
       { label:"Presentación online", tipo:"online", url:"https://1drv.ms/b/c/5e49627fe7eec215/EUPO3WslOzJAiptQ7sp3NBcByyBL5gyr7wseqMKrdOufGA?e=7FN25W" },
       { label:"Formulario", tipo:"formulario", url:"https://onedrive.live.com/?id=%2Fpersonal%2F5e49627fe7eec215%2FDocuments%2FApuntes%2F2%C2%BA%20Bachillerato%20%2D%20F%C3%ADsica%2FApuntes%20%2D%20Formularios%2FUD12%20%2D%20F%C3%ADsica%20nuclear%20%2D%20Formulario%2Epdf&parent=%2Fpersonal%2F5e49627fe7eec215%2FDocuments%2FApuntes%2F2%C2%BA%20Bachillerato%20%2D%20F%C3%ADsica%2FApuntes%20%2D%20Formularios" },
       { label:"Cuestionario Google", tipo:"google", url:"https://docs.google.com/forms/d/e/1FAIpQLSdJI9ctmPW-Vg5LpKLZjh5erl71zMdk9gMaxBvfvSAAZsQhIw/viewform" },
       { label:"Kahoot en grupo",     tipo:"kahoot_grupo", url:"https://play.kahoot.it/v2/intro?quizId=b3d53384-dd88-4799-b804-643b7a18a58b" },
       { label:"Kahoot en solitario", tipo:"kahoot_solo",  url:"https://kahoot.it/solo/?quizId=b3d53384-dd88-4799-b804-643b7a18a58b&gameMode=nano" },
     ]},
-    { nombre:"Física de partículas",        icono:"imagenes/2BACHF/UD13.png", fondo:"imagenes/2BACHF/UD13.png", enlaces:[
+    { nombre:"Física de partículas",        icono:"imagenes/2BACHF/UD13.png", fondo:"imagenes/2BACHF/UD13_-_Física_de_partículas.jpg", enlaces:[
       { label:"Presentación online", tipo:"online", url:"https://1drv.ms/b/c/5e49627fe7eec215/EWvldBr3NZNIpgzzrM9nA6ABkuldV1orGCNWNlt_wJyAdQ?e=VnyI2U" },
     ]},
   ]},
